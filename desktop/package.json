@@ -1,0 +1,31 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run build && cd ../client && ng build --output-path ../desktop/app --base-href ./ && cd ../desktop && npm run start:electron",
+    "start:electron": "./node_modules/.bin/electron ./main.js",
+    "build:package": "electron-packager . --platform-win32 --arch-x64 --icon-build/logo --out build --overwrite",
+    "build:installer": "node electron-installer.js",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/knex": "^0.15.0",
+    "knex": "^0.15.2",
+    "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {
+    "electron": "^3.0.8",
+    "electron-packager": "^12.2.0",
+    "electron-rebuild": "^1.8.2",
+    "electron-winstaller": "^2.7.0",
+    "typescript": "^3.1.6"
+  }
+}
