@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
-    "electron": "^3.0.8",
+    "electron": "^18.3.7",
     "ngx-electron": "^1.0.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
